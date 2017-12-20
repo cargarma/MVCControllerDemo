@@ -7,7 +7,7 @@ namespace MVCControllerDemo.Controllers {
     public class EmployeeController : Controller {
         // GET: Employee 
         public ActionResult Search(string name) {
-            var input = Server.HtmlEncode(name);
+            var input = Server.HtmlEncode("Empleado : " + name);
             return Content(input);
         }
     }

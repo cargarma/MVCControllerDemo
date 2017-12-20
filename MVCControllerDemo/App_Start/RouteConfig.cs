@@ -13,7 +13,11 @@ namespace MVCControllerDemo {
             routes.MapRoute(
                 name: "Employee",
                 url: "Employee/{name}",
-                defaults: new { controller = "Employee", action = "Search", name = UrlParameter.Optional });
+                defaults: new {
+                    controller = "Employee",
+                    action = "Search",
+                    name = UrlParameter.Optional
+                });
 
             routes.MapRoute(
                 name: "Default",
