@@ -5,13 +5,15 @@ using System.Web;
 using System.Web.Mvc;
 using System.Web.Routing;
 
-namespace MVCControllerDemo
-{
-    public class RouteConfig
-    {
-        public static void RegisterRoutes(RouteCollection routes)
-        {
+namespace MVCControllerDemo {
+    public class RouteConfig {
+        public static void RegisterRoutes(RouteCollection routes) {
             routes.IgnoreRoute("{resource}.axd/{*pathInfo}");
+
+            routes.MapRoute(
+                name: "Employee",
+                url: "Employee/{name}",
+                defaults: new { controller = "Employee", action = "Search", name = UrlParameter.Optional });
 
             routes.MapRoute(
                 name: "Default",
